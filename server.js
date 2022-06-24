@@ -11,3 +11,16 @@ const app = express();
 
 // PORT
 const PORT = process.env.PORT || 3001;
+
+// Mongoose connection
+mongoose.connect
+    (process.env.MONGODB_URI || 'mongodb://localhost:27017/westward', 
+    { 
+        useNewUrlParser: true 
+    });
+
+
+// Listener
+app.listen(PORT, () => {
+    console.log(`App listening on port http://localhost:${PORT}!`);
+});
