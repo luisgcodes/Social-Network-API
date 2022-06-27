@@ -45,5 +45,5 @@ const UserSchema = new Schema({
 // Initializes the User model
 const User = model('User', UserSchema);
 
-
+// Export User
 module.exports = User;
